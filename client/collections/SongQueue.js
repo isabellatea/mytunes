@@ -30,7 +30,7 @@ var SongQueue = Backbone.Collection.extend({
 
   ended: function() {
     this.shift();
-    if(this.length) {
+    if (this.length) {
       this.playFirst();
     }
   },
