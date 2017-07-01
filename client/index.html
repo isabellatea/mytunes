@@ -6,23 +6,23 @@
     <script src="bower_components/jquery/jquery.min.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
     <script src="bower_components/backbone/backbone.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <script src="data/data.js"></script>
     <script src="env/config.js"></script>
     <!-- need to add a reference to config -->
 
+    <script src="models/SongModel.js"></script> <!-- each individual song itself -->
+    <script src="collections/Songs.js"></script> <!-- collection of all song models -->
+    <script src="collections/SongQueue.js"></script> <!-- collection songs added to queue -->
+    <script src="models/AppModel.js"></script> <!-- model class that instatiates other models -->
 
-    <script src="models/SongModel.js"></script>
-    <script src="collections/Songs.js"></script>
-    <script src="collections/SongQueue.js"></script>
-    <script src="models/AppModel.js"></script>
-
-    <script src="views/PlayerView.js"></script>
-    <script src="views/LibraryView.js"></script>
-    <script src="views/LibraryEntryView.js"></script>
-    <script src="views/AppView.js"></script>
-    <script src="views/SongQueueView.js"></script>
-    <script src="views/SongQueueEntryView.js"></script>
+    <script src="views/PlayerView.js"></script> <!-- view for the music player, can end songs -->
+    <script src="views/LibraryView.js"></script> <!-- view of all library entry views -->
+    <script src="views/LibraryEntryView.js"></script> <!-- view associated with an individual song model -->
+    <script src="views/AppView.js"></script> <!-- view class that holds all other views making up the application -->
+    <script src="views/SongQueueView.js"></script> <!-- view of all song queue entry views -->
+    <script src="views/SongQueueEntryView.js"></script> <!-- view of each individual model in the song queue -->
 
     <script>
       $(function() {
