@@ -35,4 +35,37 @@ describe('SongQueueView', function() {
     expect(view.render).to.have.been.called;
   });
 
+
+  it('***added*** deletes clicked songs in songqueue', function() {
+    model = new SongModel({
+      artist: 'Fakey McFakerson',
+      title: 'Never Gonna Mock You Up',
+      url: 'example/url',
+    });
+
+    sinon.spy(SongModel.prototype, 'dequeue');
+
+    view = new SongQueueEntryView({model: model});
+    view.render();
+
+    view.$el.children().first().click();
+    expect(model.dequeue).to.have.been.called;
+
+    SongModel.prototype.dequeue.restore();
+  });
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
